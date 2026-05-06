@@ -1,0 +1,24 @@
+[
+    {
+    "title": "Sotong",
+    "description": "A real-time internal monitoring dashboard using React and Next.js for HAUD System Indonesia to track A2P SMS traffic (OTPs, notifications, etc.), providing live logging and delivery status visibility.",
+    "image": "/projects/sotong.png",
+    "tags": ["NEXT", "TAILWIND"]
+  },
+  {
+    "title": "SafeCircle Mobile App",
+    "description": "SafeCircle is a comprehensive mobile apps using Flutter for neighborhood security with Emergency Alerts, Crime Mapping, and Community Safety Tools. It is designed to help users stay safe and connected with their neighbors.",
+    "image": "/projects/safecircle.png",
+    "link": "https://github.com/iqbalxyz/safe-circle-app",
+    "github": "https://github.com/iqbalxyz/safe-circle-app",
+    "tags": ["NEXT", "TAILWIND"]
+  },
+  {
+    "title": "SafeCircle Backend",
+    "description": "SafeCircle is a comprehensive backend service using Express.js, MariaDB, and JWT to provide API for SafeCircle mobile app.",
+    "image": "/projects/safecircle.jpeg",
+    "link": "https://github.com/iqbalxyz/safe-circle-app",
+    "github": "https://github.com/iqbalxyz/safe-circle-app",
+    "tags": ["NEXT", "TAILWIND"]
+  }
+]

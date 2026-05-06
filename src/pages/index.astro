@@ -1,0 +1,49 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import AboutMe from "@/components/AboutMe.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeDots from "@/components/icons/CodeDots.astro";
+import Experience from "@/components/Experience.astro";
+import UserHeart from "@/components/icons/UserHeart.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import TitleSection from "@/components/TitleSection.astro";
+---
+
+<Layout
+  title="Portfolio Iqbal - Aspiring Software Engineer"
+  description="Iqbal is a software engineer with hands-on experience in backend and full-stack development, supported by a strong background in application support."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <TitleSection>
+          <Briefcase class="size-8" />
+          Work Experience
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="projects">
+        <TitleSection>
+          <CodeDots class="size-7" />
+          Projects
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="about-me">
+        <TitleSection>
+          <UserHeart class="size-8" />
+          About Me
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>

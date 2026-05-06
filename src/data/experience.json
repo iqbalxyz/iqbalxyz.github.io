@@ -1,0 +1,15 @@
+[
+  {
+    "date": "November 2021 - Present",
+    "title": "IT Staff",
+    "company": "HAUD Systems Indonesia",
+    "description": "Investigated production issues via logs and databases to maintain system stability, and developed test automation scripts (Java, Appium, Selenium) running 1,500–2,000 daily tests to reduce manual effort by ~40%. Built an Android app (Java) for visualizing test results, provided technical support handling 8–12 daily requests, and supported 3–5 monthly releases by identifying 15–20 bugs each. Improved full-stack systems (JS, TS, Node.js, MySQL) across 15–20 API endpoints, optimized MySQL queries to boost data reliability by ~15–20%, managed 25–30 weekly JIRA tickets, and collaborated cross-functionally on reliable releases.",
+    "current": true
+  },
+  {
+    "date": "September 2019 - December 2019",
+    "title": "Network Engineer Intern",
+    "company": "SD Al-Azhar 46",
+    "description": "Assisted in configuring and troubleshooting the SD Al-Azhar 46 school's network infrastructure, including routers, switches, and access points. Supported daily operations for computer labs and offices, monitored network performance, resolved connectivity issues, documented configurations, and collaborated with IT staff during upgrades and hardware deployments."
+  }
+]
