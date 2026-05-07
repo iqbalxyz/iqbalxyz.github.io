@@ -1,0 +1,82 @@
+[
+  {
+    "name": "JavaScript",
+    "level": "Advanced",
+    "icon": "javascript"
+  },
+  {
+    "name": "TypeScript",
+    "level": "Advanced",
+    "icon": "typescript"
+  },
+  {
+    "name": "Java",
+    "level": "Intermediate",
+    "icon": "java"
+  },
+  {
+    "name": "PHP",
+    "level": "Beginner",
+    "icon": "php"
+  },
+  {
+    "name": "React",
+    "level": "Intermediate",
+    "icon": "react"
+  },
+  {
+    "name": "Angular",
+    "level": "Intermediate",
+    "icon": "angular"
+  },
+  {
+    "name": "Node.js",
+    "level": "Advanced",
+    "icon": "nodejs"
+  },
+  {
+    "name": "Express.js",
+    "level": "Advanced",
+    "icon": "express"
+  },
+  {
+    "name": "Next.js",
+    "level": "Advanced",
+    "icon": "nextjs"
+  },
+  {
+    "name": "Flutter",
+    "level": "Intermediate",
+    "icon": "flutter"
+  },
+  {
+    "name": "Appium",
+    "level": "Advanced",
+    "icon": "appium"
+  },
+  {
+    "name": "Git",
+    "level": "Advanced",
+    "icon": "git"
+  },
+  {
+    "name": "Android",
+    "level": "Intermediate",
+    "icon": "android"
+  },
+  {
+    "name": "Linux",
+    "level": "Advanced",
+    "icon": "linux"
+  },
+  {
+    "name": "MySQL",
+    "level": "Advanced",
+    "icon": "mysql"
+  },
+  {
+    "name": "Firebase",
+    "level": "Intermediate",
+    "icon": "firebase"
+  }
+]

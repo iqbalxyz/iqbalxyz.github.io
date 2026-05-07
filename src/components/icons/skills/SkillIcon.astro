@@ -1,0 +1,49 @@
+---
+import JavaScript from "./JavaScript.astro";
+import TypeScript from "./TypeScript.astro";
+import React from "./React.astro";
+import AstroIcon from "./AstroIcon.astro";
+import NodeJS from "./NodeJS.astro";
+import Git from "./Git.astro";
+import Angular from "./Angular.astro";
+import Flutter from "./Flutter.astro";
+import NextJS from "./NextJS.astro";
+import Express from "./Express.astro";
+import Appium from "./Appium.astro";
+import Firebase from "./Firebase.astro";
+import Android from "./Android.astro";
+import Linux from "./Linux.astro";
+import MySQL from "./Mysql.astro";
+import Java from "./Java.astro";
+import Php from "./Php.astro";
+
+const ICONS = {
+  javascript: JavaScript,
+  typescript: TypeScript,
+  java: Java,
+  php: Php,
+  react: React,
+  astro: AstroIcon,
+  nodejs: NodeJS,
+  git: Git,
+  angular: Angular,
+  flutter: Flutter,
+  nextjs: NextJS,
+  express: Express,
+  appium: Appium,
+  firebase: Firebase,
+  android: Android,
+  linux: Linux,
+  mysql: MySQL,
+};
+
+export interface Props {
+  icon: string;
+  class?: string;
+}
+
+const { icon, class: className } = Astro.props;
+const IconComponent = ICONS[icon as keyof typeof ICONS] || JavaScript;
+---
+
+<IconComponent class={className} />

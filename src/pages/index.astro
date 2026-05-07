@@ -10,6 +10,7 @@ import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
+import Skills from "@/components/Skills.astro";
 ---
 
 <Layout
@@ -35,6 +36,14 @@ import TitleSection from "@/components/TitleSection.astro";
           Projects
         </TitleSection>
         <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="skills">
+        <TitleSection>
+          <Briefcase class="size-8" />
+          Skills
+        </TitleSection>
+        <Skills />
       </SectionContainer>
 
       <SectionContainer id="about-me">

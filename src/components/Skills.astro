@@ -1,0 +1,14 @@
+---
+import SkillItem from "./SkillItem.astro";
+import skills from "@/data/skills.json";
+---
+
+<ol class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16" aria-label="Skills">
+  {
+    skills.map((skill, i) => (
+      <li class="anim-fade-in list-none" style={`animation-delay: ${i * 100}ms`}>
+        <SkillItem {...skill} />
+      </li>
+    ))
+  }
+</ol>
