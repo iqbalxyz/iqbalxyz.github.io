@@ -1,7 +1,7 @@
 [
     {
-    "title": "Sotong",
-    "description": "A real-time internal monitoring dashboard using React and Next.js for HAUD System Indonesia to track A2P SMS traffic (OTPs, notifications, etc.), providing live logging and delivery status visibility.",
+    "title": "Internal Project",
+    "description": "A real-time internal monitoring dashboard using React and Next.js for HAUD System Indonesia to track A2P SMS traffic (OTPs, notifications, etc.), providing live logging and system actions.",
     "image": "/projects/sotong.png",
     "tags": ["NEXT", "REACT"]
   },
@@ -22,7 +22,7 @@
     "tags": ["NODE", "EXPRESS"]
   },
   {
-    "title": "Perintis",
+    "title": "Perintis (Penyiram Tanaman Otomatis)",
     "description": "An all-in-one automatic plant watering system using ESP32, Firebase, Angular, and Node.js. It lets users monitor and control the system from their phone, including soil moisture and temperature tracking.",
     "image": "/projects/perintis.jpg",
     "link": "https://github.com/iqbalxyz/perintis-api",
