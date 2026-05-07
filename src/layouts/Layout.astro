@@ -1,9 +1,10 @@
 ---
-import "@fontsource-variable/onest";
+import "@fontsource-variable/plus-jakarta-sans";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import VantaBackground from "@/components/VantaBackground.astro";
 
 interface Props {
   title: string;
@@ -26,16 +27,18 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
 
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-white selection:bg-amber-500/40">
+    <VantaBackground />
     <div
-      class="fixed inset-0 z-[-2] bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(251,191,36,0.14),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(251,191,36,0.08),rgba(0,0,0,0))]"
+      class="fixed inset-0 z-[-2]
+      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(245,158,11,0.2),rgba(0,0,0,0.5))]"
     >
     </div>
+    <!-- Dimmer overlay to improve readability -->
+    <div class="fixed inset-0 z-[-1] bg-black/40 pointer-events-none"></div>
     <!-- Grain texture overlay for tactile depth -->
     <div
-      class="pointer-events-none fixed inset-0 z-[-1] opacity-[0.035] dark:opacity-[0.05]"
+      class="pointer-events-none fixed inset-0 z-[-1] opacity-[0.05]"
       style="background-image: url('/noise.svg'); background-size: 200px 200px;"
       aria-hidden="true"
     >
@@ -49,16 +52,17 @@ const { description, title } = Astro.props;
       }
 
       html {
-        font-family: "Onest Variable", system-ui, sans-serif;
+        font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
       }
 
       body {
-        color: rgba(17, 17, 17, 0.9);
+        color: rgba(255, 255, 255, 1);
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        background-color: #000000;
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -69,7 +73,7 @@ const { description, title } = Astro.props;
 
       @media (prefers-color-scheme: dark) {
         body {
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 1);
         }
       }
 
@@ -78,7 +82,7 @@ const { description, title } = Astro.props;
           backdrop-filter: blur(20px);
           border-width: 1px;
           border-color: rgba(0, 0, 0);
-          padding: 0.25rem 0.75rem;
+          padding: 0.5rem 1rem;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -128,14 +132,22 @@ const { description, title } = Astro.props;
       .anim-fade-in {
         animation: fade-in-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
       }
-      .anim-delay-1 { animation-delay: 120ms; }
-      .anim-delay-2 { animation-delay: 260ms; }
-      .anim-delay-3 { animation-delay: 400ms; }
-      .anim-delay-4 { animation-delay: 540ms; }
+      .anim-delay-1 {
+        animation-delay: 120ms;
+      }
+      .anim-delay-2 {
+        animation-delay: 260ms;
+      }
+      .anim-delay-3 {
+        animation-delay: 400ms;
+      }
+      .anim-delay-4 {
+        animation-delay: 540ms;
+      }
 
       /* Gradient text utility for the hero name */
       .gradient-name {
-        background: linear-gradient(135deg, #f59e0b 10%, #f97316 90%);
+        background: linear-gradient(135deg, #b8860b 10%, #daa520 90%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;

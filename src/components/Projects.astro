@@ -1,21 +1,39 @@
 ---
 import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
+import Express from "./icons/Express.astro";
 import ExternalLink from "./icons/ExternalLink.astro";
+import Flutter from "./icons/Flutter.astro";
+import Node from "./icons/Node.astro";
+import React from "./icons/React.astro";
 import LinkButton from "./LinkButton.astro";
 import projectsData from "@/data/projects.json";
 
 const TAGS: Record<string, { name: string; class: string; icon: any }> = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: NextJS,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  FLUTTER: {
+    name: "Flutter",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: Flutter,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#003159] text-white",
+    icon: Node,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#003159] text-white",
+    icon: React,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#003159] text-white",
+    icon: Express,
   },
 };
 
@@ -45,9 +63,7 @@ const PROJECTS = projectsData.map((project) => ({
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
+          <h3 class="text-2xl font-bold text-white">{title}</h3>
           <ul class="flex flex-row flex-wrap mt-3 gap-2">
             {tags.map((tag) => (
               <li>
@@ -61,9 +77,7 @@ const PROJECTS = projectsData.map((project) => ({
             ))}
           </ul>
 
-          <p class="mt-3 text-gray-700 dark:text-gray-400 text-pretty">
-            {description}
-          </p>
+          <p class="mt-3 text-gray-100 text-pretty">{description}</p>
           <footer class="flex items-center mt-4 gap-x-4">
             {github && (
               <LinkButton href={github}>

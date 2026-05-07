@@ -1,0 +1,56 @@
+---
+// src/components/VantaBackground.astro
+---
+
+<div
+  id="vanta-bg"
+  style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"
+>
+</div>
+
+<script>
+  declare global {
+    interface Window {
+      __vantaEffect: any;
+    }
+  }
+
+  (async () => {
+    try {
+      // Dynamic imports
+      const THREE = await import("three");
+      // @ts-ignore - Vanta DOTS requires global THREE
+      window.THREE = THREE;
+      // @ts-ignore - Vanta doesn't have built-in types for its distribution files
+      const vantaModule = await import("vanta/dist/vanta.dots.min");
+      const DOTS = vantaModule.default;
+
+      // Initialize Vanta
+      const effect = DOTS({
+        el: "#vanta-bg",
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xf59e0b, // Amber to match your gradient
+        backgroundColor: 0x000000,
+        showLines: true,
+        spacing: 24.0,
+      });
+
+      // Cleanup for Astro view transitions
+      document.addEventListener("astro:after-swap", () => {
+        // Re-initialize after navigation if needed
+      });
+
+      // Optional: Expose for cleanup
+      window.__vantaEffect = effect;
+    } catch (error) {
+      console.error("Vanta failed to load:", error);
+    }
+  })();
+</script>

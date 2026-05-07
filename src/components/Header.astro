@@ -29,12 +29,12 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
 >
   <nav
-    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent"
+    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-white/70 justify-center items-center border border-white/10"
   >
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative block px-3 py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="nav-link relative block px-3 py-1.5 rounded-full transition-colors duration-200 hover:text-amber-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,9 +42,9 @@ const navItems = [
         </a>
       ))
     }
-    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10">
+    <!-- <div class="ml-2 pl-2 border-l border-white/10">
       <ThemeToggle />
-    </div>
+    </div> -->
   </nav>
 </header>
 
@@ -59,18 +59,16 @@ const navItems = [
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
               item.classList.add(
-                "text-yellow-500",
-                "dark:text-yellow-400",
-                "bg-yellow-400/10",
+                "text-amber-400",
+                "bg-amber-400/10",
               );
-              item.classList.remove("text-gray-600", "dark:text-gray-300");
+              item.classList.remove("text-white/70");
             } else {
               item.classList.remove(
-                "text-yellow-500",
-                "dark:text-yellow-400",
-                "bg-yellow-400/10",
+                "text-amber-400",
+                "bg-amber-400/10",
               );
-              item.classList.add("text-gray-600", "dark:text-gray-300");
+              item.classList.add("text-white/70");
             }
           });
         }
@@ -107,19 +105,19 @@ const navItems = [
   }
 
   .header-nav {
-    @apply dark:bg-gray-900/80 bg-white/60;
+    @apply bg-black/40 backdrop-blur-md;
   }
 
-  .nav-link.text-yellow-500 {
+  .nav-link.text-amber-400 {
     @apply font-semibold;
   }
 
   @keyframes nav-appear {
     0% {
-      @apply dark:bg-gray-900/0 bg-white/0 border-transparent shadow-none;
+      @apply bg-black/0 border-transparent shadow-none;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur-md ring-white/10 dark:ring-white/5 border-gray-200/20 dark:border-white/5;
+      @apply shadow-2xl ring-1 backdrop-blur-xl ring-white/10 border-white/10;
     }
   }
 </style>
