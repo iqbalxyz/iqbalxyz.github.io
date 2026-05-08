@@ -6,11 +6,13 @@ import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeDots from "@/components/icons/CodeDots.astro";
 import Experience from "@/components/Experience.astro";
 import UserHeart from "@/components/icons/UserHeart.astro";
+import MailIcon from "@/components/icons/Mail.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import Skills from "@/components/Skills.astro";
+import Contact from "@/components/Contact.astro";
 ---
 
 <Layout
@@ -52,6 +54,14 @@ import Skills from "@/components/Skills.astro";
           About Me
         </TitleSection>
         <AboutMe />
+      </SectionContainer>
+
+      <SectionContainer id="contact">
+        <TitleSection>
+          <MailIcon class="size-8" />
+          Contact
+        </TitleSection>
+        <Contact />
       </SectionContainer>
     </div>
   </main>

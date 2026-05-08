@@ -1,5 +1,4 @@
 ---
-// import HeartFilled from "./icons/HeartFilled.astro";
 const currentYear = new Date().getFullYear();
 ---
 
@@ -11,23 +10,69 @@ const currentYear = new Date().getFullYear();
   >
     <span
       class="text-sm sm:text-center text-zinc-300 inline-flex items-center gap-1"
-      >&copy; {currentYear}
-      <a href="" class="hover:underline text-amber-400">IqbalXYZ</a>. <a href=""
-        >Inspired</a
-      > by <a href="https://midu.dev/" class="hover:underline text-amber-400"
+    >
+      &copy; {currentYear}
+      <a href="/" class="hover:underline text-amber-400">IqbalXYZ</a>. Inspired
+      by
+      <a href="https://midu.dev" class="hover:underline text-amber-400"
         >MiduDev</a
       >.
     </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/70 sm:mt-0"
-    >
-      <li>
-        <a
-          id="contacto"
-          href="mailto:moch.iqbal.sudrajat@gmail.com"
-          class="hover:underline">Contact</a
-        >
-      </li>
-    </ul>
   </div>
 </footer>
+
+<button
+  id="back-to-top"
+  aria-label="Back to top"
+  class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-amber-400/50 text-black shadow-lg transition-all duration-300 opacity-0 pointer-events-none hover:scale-110 active:scale-95"
+>
+  <svg
+    xmlns="http://w3.org"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+<script>
+  // Function to initialize the scroll logic
+  const initBackToTop = () => {
+    const backToTop = document.getElementById("back-to-top");
+
+    if (!backToTop) return;
+
+    const toggleVisible = () => {
+      if (window.scrollY > document.documentElement.scrollHeight * 0.5) {
+        backToTop.classList.remove("opacity-0", "pointer-events-none");
+        backToTop.classList.add("opacity-100");
+      } else {
+        backToTop.classList.remove("opacity-100");
+        backToTop.classList.add("opacity-0", "pointer-events-none");
+      }
+    };
+
+    // 1. Listen for scroll events
+    window.addEventListener("scroll", toggleVisible);
+
+    // 2. Handle the click event
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // 3. Check immediately (in case page loads mid-scroll)
+    toggleVisible();
+  };
+
+  // Runs on initial load
+  initBackToTop();
+
+  // Runs every time a page navigation occurs (Astro View Transitions)
+  document.addEventListener("astro:page-load", initBackToTop);
+</script>

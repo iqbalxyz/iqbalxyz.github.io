@@ -1,9 +1,15 @@
 [
-    {
+  {
     "title": "Internal Project",
     "description": "A real-time internal monitoring dashboard using React and Next.js for HAUD System Indonesia to track A2P SMS traffic (OTPs, notifications, etc.), providing live logging and system actions.",
     "image": "/projects/sotong.png",
     "tags": ["NEXT", "REACT"]
+  },
+  {
+    "title": "Android A2P Automation",
+    "description": "Automating probe testing using Android and Appium to capture and validate A2P SMS for analytics, aimed at helping network operators detecting and preventing fraudulent activity from applications or SMS API senders.",
+    "image": "/projects/autoprobe.png",
+    "tags": ["ANDROID", "APPIUM", "JAVA"]
   },
   {
     "title": "SafeCircle Mobile App",
