@@ -11,6 +11,10 @@ import Unity from "./icons/skills/Unity.astro";
 import Android from "./icons/skills/Android.astro";
 import Appium from "./icons/skills/Appium.astro";
 import Java from "./icons/skills/Java.astro";
+import CodeIgniter from "./icons/skills/CodeIgniter.astro";
+import PHP from "./icons/skills/Php.astro";
+import MySQL from "./icons/skills/Mysql.astro";
+import Selenium from "./icons/skills/Selenium.astro";
 import ExternalLink from "./icons/ExternalLink.astro";
 import LinkButton from "./LinkButton.astro";
 import projectsData from "@/data/projects.json";
@@ -71,6 +75,26 @@ const TAGS: Record<string, { name: string; class: string; icon: any }> = {
     class: "bg-[#003159] text-white",
     icon: Java,
   },
+  CODEIGNITER: {
+    name: "CodeIgniter",
+    class: "bg-[#003159] text-white",
+    icon: CodeIgniter,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#003159] text-white",
+    icon: PHP,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#003159] text-white",
+    icon: MySQL,
+  },
+  SELENIUM: {
+    name: "Selenium",
+    class: "bg-[#003159] text-white",
+    icon: Selenium,
+  },
 };
 
 const PROJECTS = projectsData.map((project) => ({
@@ -121,12 +145,12 @@ const PROJECTS = projectsData.map((project) => ({
                 Code
               </LinkButton>
             )}
-            {link && (
+            {/* {link && (
               <LinkButton href={link}>
                 <ExternalLink class="size-4" />
                 Preview
               </LinkButton>
-            )}
+            )} */}
           </footer>
         </div>
       </article>

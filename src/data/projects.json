@@ -1,9 +1,15 @@
 [
   {
-    "title": "Internal Project",
+    "title": "A2P Dashboard",
     "description": "A real-time internal monitoring dashboard using React and Next.js for HAUD System Indonesia to track A2P SMS traffic (OTPs, notifications, etc.), providing live logging and system actions.",
     "image": "/projects/sotong.png",
-    "tags": ["NEXT", "REACT"]
+    "tags": ["NEXT", "REACT", "MYSQL"]
+  },
+  {
+    "title": "Android App for Monitoring A2P SMS",
+    "description": "A real-time monitoring Android application for tracking and monitoring A2P SMS traffic (OTPs, notifications, etc.), providing data and statistics for clients.",
+    "image": "/projects/nvision.gif",
+    "tags": ["ANDROID"]
   },
   {
     "title": "Android A2P Automation",
@@ -12,12 +18,18 @@
     "tags": ["ANDROID", "APPIUM", "JAVA"]
   },
   {
+    "title": "Web A2P Automation",
+    "description": "A web version of automating A2P SMS testing, together with Appium version it helps reduce manual testing process and increase efficiency.",
+    "image": "/projects/webscraping.jpg",
+    "tags": ["SELENIUM", "JAVA"]
+  },
+  {
     "title": "SafeCircle Mobile App",
     "description": "SafeCircle is a comprehensive mobile app using Flutter for neighborhood security with Emergency Alerts, Crime Mapping, and Community Safety Tools. It is designed to help users stay safe and connected with their neighbors.",
     "image": "/projects/safecircle.png",
     "link": "https://github.com/iqbalxyz/safe-circle-app",
     "github": "https://github.com/iqbalxyz/safe-circle-app",
-    "tags": ["FLUTTER"]
+    "tags": ["FLUTTER", "ANDROID"]
   },
   {
     "title": "SafeCircle Backend",
@@ -25,7 +37,7 @@
     "image": "/projects/nwatch.png",
     "link": "https://github.com/iqbalxyz/neighborhood-watch-express",
     "github": "https://github.com/iqbalxyz/neighborhood-watch-express",
-    "tags": ["NODE", "EXPRESS"]
+    "tags": ["NODE", "EXPRESS", "MYSQL"]
   },
   {
     "title": "Perintis (Penyiram Tanaman Otomatis)",
@@ -34,6 +46,14 @@
     "link": "https://github.com/iqbalxyz/perintis-api",
     "github": "https://github.com/iqbalxyz/perintis-api",
     "tags": ["NODE", "EXPRESS", "ANGULAR", "FIREBASE"]
+  },
+  {
+    "title": "Online Gamestore",
+    "description": "A college project that I built using CodeIgniter and bootstrap as my first attempt to create an MVC architecture application. It is a simple online gamestore using php native for the backend and MySQL for the database.",
+    "image": "/projects/gamestore.png",
+    "link": "https://github.com/iqbalxyz/toko-game-online",
+    "github": "https://github.com/iqbalxyz/toko-game-online",
+    "tags": ["CODEIGNITER", "PHP", "MYSQL"]
   },
   {
     "title": "Jakarta's Maverick",
