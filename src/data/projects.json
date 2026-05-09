@@ -7,7 +7,7 @@
   },
   {
     "title": "Android A2P Automation",
-    "description": "Automating probe testing using Android and Appium to capture and validate A2P SMS for analytics, aimed at helping network operators detecting and preventing fraudulent activity from applications or SMS API senders.",
+    "description": "Automating probe testing with Android, Appium, and Java to capture and validate A2P SMS for analytics, helping network operators detect and prevent fraudulent activity from applications or SMS API senders while reducing manual testing.",
     "image": "/projects/autoprobe.png",
     "tags": ["ANDROID", "APPIUM", "JAVA"]
   },

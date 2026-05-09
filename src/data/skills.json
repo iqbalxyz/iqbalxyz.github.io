@@ -30,6 +30,16 @@
     "icon": "angular"
   },
   {
+    "name": "Yii",
+    "level": "Advanced",
+    "icon": "yii"
+  },
+  {
+    "name": "CodeIgniter",
+    "level": "Intermediate",
+    "icon": "codeigniter"
+  },
+  {
     "name": "Node.js",
     "level": "Advanced",
     "icon": "nodejs"
@@ -50,26 +60,16 @@
     "icon": "flutter"
   },
   {
+    "name": "Selenium",
+    "level": "Advanced",
+    "icon": "selenium"
+  },
+  {
     "name": "Appium",
     "level": "Advanced",
     "icon": "appium"
   },
-  {
-    "name": "Git",
-    "level": "Advanced",
-    "icon": "git"
-  },
-  {
-    "name": "Android",
-    "level": "Intermediate",
-    "icon": "android"
-  },
-  {
-    "name": "Linux",
-    "level": "Advanced",
-    "icon": "linux"
-  },
-  {
+    {
     "name": "MySQL",
     "level": "Advanced",
     "icon": "mysql"
@@ -78,5 +78,25 @@
     "name": "Firebase",
     "level": "Intermediate",
     "icon": "firebase"
+  },
+  {
+    "name": "Git",
+    "level": "Advanced",
+    "icon": "git"
+  },
+  {
+    "name": "Docker",
+    "level": "Beginner",
+    "icon": "docker"
+  },
+  {
+    "name": "Linux",
+    "level": "Advanced",
+    "icon": "linux"
+  },
+  {
+    "name": "Android",
+    "level": "Intermediate",
+    "icon": "android"
   }
 ]

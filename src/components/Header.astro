@@ -30,8 +30,10 @@ const navItems = [
 ];
 ---
 
+<!-- hide header while scroll only for mobile -->
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
+  id="main-header"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4 transition-transform duration-300"
 >
   <nav
     class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-xl text-white/70 justify-center items-center border border-white/10"
@@ -93,6 +95,23 @@ const navItems = [
         });
       }
     };
+
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById("main-header");
+
+    window.addEventListener("scroll", () => {
+      // Only apply logic on mobile screens (optional - md is 768px)
+      if (window.innerWidth < 768) {
+        if (window.scrollY > lastScrollY && window.scrollY > 50) {
+          // Scrolling Down - Hide Header
+          header?.classList.add("-translate-y-full", "hidden");
+        } else {
+          // Scrolling Up - Show Header
+          header?.classList.remove("-translate-y-full", "hidden");
+        }
+      }
+      lastScrollY = window.scrollY;
+    });
   });
 </script>
 
