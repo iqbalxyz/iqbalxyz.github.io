@@ -9,7 +9,7 @@
     "title": "Android App for Monitoring A2P SMS",
     "description": "A real-time monitoring Android application for tracking and monitoring A2P SMS traffic (OTPs, notifications, etc.), providing data and statistics for clients.",
     "image": "/projects/nvision.gif",
-    "tags": ["ANDROID"]
+    "tags": ["ANDROID", "JAVA"]
   },
   {
     "title": "Android A2P Automation",
