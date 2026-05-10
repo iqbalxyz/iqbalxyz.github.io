@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import ArrowRight from "./icons/ArrowRight.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {
+    posts.map((post) => (
+      <article class="group relative flex flex-col h-full bg-gray-800/30 border border-gray-700/50 rounded-2xl overflow-hidden transition-all duration-300 hover:border-amber-500/50 hover:shadow-[0_0_30px_-10px_rgba(245,158,11,0.2)]">
+        {post.data.image && (
+          <div class="aspect-video overflow-hidden">
+            <img
+              src={post.data.image}
+              alt={post.data.title}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        )}
+        
+        <div class="flex flex-col flex-1 p-6">
+          <div class="flex flex-wrap gap-2 mb-4">
+            {post.data.tags.map((tag) => (
+              <span class="text-[10px] font-medium px-2 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20 uppercase tracking-wider">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+            {post.data.title}
+          </h3>
+
+          <p class="text-gray-400 text-sm line-clamp-3 mb-6">
+            {post.data.description}
+          </p>
+
+          <div class="mt-auto flex items-center justify-between">
+            <time class="text-xs text-gray-500">
+              {post.data.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+            
+            <a
+              href={`/blog/${post.slug}`}
+              class="inline-flex items-center gap-1 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors"
+            >
+              Read post
+              <ArrowRight class="size-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+
+        <a href={`/blog/${post.slug}`} class="absolute inset-0 z-0" aria-label={`Read ${post.data.title}`} />
+      </article>
+    ))
+  }
+</div>

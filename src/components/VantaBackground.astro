@@ -15,8 +15,19 @@
     }
   }
 
-  (async () => {
+  let effect: any = null;
+
+  async function initVanta() {
     try {
+      // Cleanup existing effect if it exists
+      if (effect) {
+        effect.destroy();
+        effect = null;
+      }
+
+      const vantaContainer = document.querySelector("#vanta-bg");
+      if (!vantaContainer) return;
+
       // Dynamic imports
       const THREE = await import("three");
       // @ts-ignore - Vanta DOTS requires global THREE
@@ -26,7 +37,7 @@
       const DOTS = vantaModule.default;
 
       // Initialize Vanta
-      const effect = DOTS({
+      effect = DOTS({
         el: "#vanta-bg",
         THREE: THREE,
         mouseControls: true,
@@ -42,15 +53,20 @@
         spacing: 24.0,
       });
 
-      // Cleanup for Astro view transitions
-      document.addEventListener("astro:after-swap", () => {
-        // Re-initialize after navigation if needed
-      });
-
-      // Optional: Expose for cleanup
       window.__vantaEffect = effect;
     } catch (error) {
       console.error("Vanta failed to load:", error);
     }
-  })();
+  }
+
+  // Run on initial load and after every navigation
+  document.addEventListener("astro:page-load", initVanta);
+
+  // Optional: cleanup before swapping pages
+  document.addEventListener("astro:before-swap", () => {
+    if (effect) {
+      effect.destroy();
+      effect = null;
+    }
+  });
 </script>
