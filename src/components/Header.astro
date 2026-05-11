@@ -13,7 +13,7 @@ const navItems = [
     url: "/#skills",
   },
   {
-    title: "Experience",
+    title: "Work",
     label: "experience",
     url: "/#experience",
   },
@@ -41,12 +41,12 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4 transition-transform duration-300"
 >
   <nav
-    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-xl text-white/70 justify-center items-center border border-white/10"
+    class="header-nav flex px-1 sm:px-4 py-1.5 text-xs sm:text-sm font-medium rounded-xl text-white/70 justify-center items-center border border-white/10 gap-x-0.5 sm:gap-x-2"
   >
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative block px-3 py-1.5 rounded-xl transition-colors duration-200 hover:text-amber-400"
+          class="nav-link relative block px-2 sm:px-3 py-1.5 rounded-xl transition-colors duration-200 hover:text-amber-400 text-nowrap"
           aria-label={link.label}
           href={link.url}
         >
@@ -67,15 +67,12 @@ const navItems = [
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.id) {
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-amber-400", "bg-amber-400/10");
-              item.classList.remove("text-white/70");
-            } else {
-              item.classList.remove("text-amber-400", "bg-amber-400/10");
-              item.classList.add("text-white/70");
-            }
+            const isMatch = item.getAttribute("aria-label") === entry.target.id;
+            item.classList.toggle("text-amber-400", isMatch);
+            item.classList.toggle("bg-amber-400/10", isMatch);
+            item.classList.toggle("text-white/70", !isMatch);
           });
         }
       });
@@ -83,8 +80,8 @@ const navItems = [
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
+      rootMargin: "-20% 0px -80% 0px",
+      threshold: 0,
     });
 
     sections.forEach((section) => {
