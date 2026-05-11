@@ -2,7 +2,7 @@
 title: "Building a Scalable Portfolio with Astro"
 description: "Discover how to leverage Astro's Content Collections to build a maintainable and performant blog section for your portfolio."
 date: 2026-03-10
-image: "/projects/safecircle.png"
+image: "/blogs/astro.png"
 tags: ["Astro", "Web Dev", "Performance"]
 ---
 
@@ -15,7 +15,7 @@ Enter **Astro**
 
 After three months in production, my portfolio scores a almost perfect 90's on Lighthouse, loads in under 300ms on 4G, and has room to scale to thousands of pages. Here is exactly how I built it.
 
-## The "Islands" Architecture: Why Astro Wins
+### The "Islands" Architecture: Why Astro Wins
 
 Traditional frameworks (React, Vue, Svelte) send entire JavaScript bundles to the client. If you have a static header and a non-interactive blog post, React still ships its runtime.
 
@@ -86,7 +86,8 @@ Now, my "Contact" form uses an Astro endpoint (/api/contact.ts) that runs server
 **Step 4: Optimizing Images for Scale**
 
 Nothing kills a portfolio's speed like unoptimized 5MB PNGs.
-Astro’s built-in <Image /> component is non-negotiable.
+Astro’s built-in `<Image />` component is non-negotiable.
+
 Before (bad):
 
 ```
@@ -108,14 +109,17 @@ import { Image } from '@astrojs/image/components';
 ```
 
 This generates multiple resolutions, lazy loads, and outputs WebP automatically. My image weight dropped from 4.2MB to 89KB average.
+
 **Step 5: The Scalability Test (100 Projects)**
+
 To test scale, I generated 100 dummy project pages using a Node script that created markdown files.
 The build time comparison:
-· Gatsby (GraphQL): 4m 12s
-· Next.js (Static Export): 2m 18s
-· Astro: 11 seconds
-Why? Astro doesn't bootstrap a virtual DOM during build. It renders straight to strings.
-Pro Tips I Learned the Hard Way
+
+- Gatsby (GraphQL): 4m 12s
+- Next.js (Static Export): 2m 18s
+- Astro: 11 seconds
+  Why? Astro doesn't bootstrap a virtual DOM during build. It renders straight to strings.
+  Pro Tips I Learned the Hard Way
 
 1. Use View Transitions for free
    Astro 3.0+ includes built-in view transitions. Add it to your layout:
@@ -134,7 +138,7 @@ import { ViewTransitions } from 'astro:transitions';
 Now page navigations are SPA-fast, but you still get static HTML. It feels magic.
 
 2. Deploy to Github Pages
-   You can see the <span style="color:blue">[tutorial](https://iqbalxyz.github.io/blog/<span style="color:blue">[Your Link Text](https://example.com)</span>/)</span> on how to deploy to Github Pages.
+   You can see the <span style="color:blue">[tutorial](https://iqbalxyz.github.io/blog/how-to-deploy-astro-to-github-pages)</span> on how to deploy to Github Pages.
 
 3. Don't over-island
    Only add client:load to components that truly need JavaScript on initial paint. Use client:visible for fold components or client:idle for non-critical widgets.

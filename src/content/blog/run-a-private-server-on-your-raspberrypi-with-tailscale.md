@@ -2,7 +2,7 @@
 title: "From Zero to Homelab: Run a Private Server on Your Raspberry Pi with Tailscale"
 description: "Turn your old Raspberry Pi into a private homelab server that you can access from anywhere with Tailscale."
 date: 2026-05-10
-image: "/projects/safecircle.png"
+image: "/blogs/tailscale.jpg"
 tags: ["Raspberry Pi", "Homelab", "Tailscale", "Self-hosted"]
 ---
 
@@ -41,7 +41,7 @@ Update the system:
 sudo apt update && sudo apt upgrade -y
 ```
 
-## Now your Pi is ready to become a server.
+Now your Pi is ready to become a server.
 
 Step 2: Install Tailscale
 Tailscale is just a package away. Run this on your Pi:

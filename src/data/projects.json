@@ -26,7 +26,7 @@
   {
     "title": "SafeCircle Mobile App",
     "description": "SafeCircle is a comprehensive mobile app using Flutter for neighborhood security with Emergency Alerts, Crime Mapping, and Community Safety Tools. It is designed to help users stay safe and connected with their neighbors.",
-    "image": "/projects/safecircle.png",
+    "image": "/projects/safecircle.gif",
     "link": "https://github.com/iqbalxyz/safe-circle-app",
     "github": "https://github.com/iqbalxyz/safe-circle-app",
     "tags": ["FLUTTER", "ANDROID"]

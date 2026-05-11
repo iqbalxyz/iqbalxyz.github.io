@@ -2,7 +2,7 @@
 title: "How to Deploy Your Astro Portfolio to GitHub Pages: A Step-by-Step Guide"
 description: "A Step-by-Step Guide to Deploying Your Astro Portfolio to GitHub Pages"
 date: 2026-03-23
-image: "/projects/safecircle.png"
+image: "/blogs/githubpages.png"
 tags: ["Astro", "Web Dev", "GitHub Pages"]
 ---
 
@@ -161,4 +161,5 @@ Want a custom domain like www.yourname.com?
 That’s it, your Astro portfolio is now deployed on GitHub Pages with continuous deployment. Every git push automatically rebuilds and redeploys your site. No FTP, no server costs, no headaches.
 
 Go share your portfolio link with pride. And if you found this useful, feel free to share it with another Astro builder.
+
 Happy deploying!
