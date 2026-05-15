@@ -35,15 +35,14 @@
     "title": "SafeCircle Backend",
     "description": "SafeCircle is a backend service using Express.js, MariaDB, and JWT to provide API for SafeCircle mobile app.",
     "image": "/projects/nwatch.png",
-    "link": "https://github.com/iqbalxyz/neighborhood-watch-express",
     "github": "https://github.com/iqbalxyz/neighborhood-watch-express",
     "tags": ["NODE", "EXPRESS", "MYSQL"]
   },
   {
     "title": "Perintis (Penyiram Tanaman Otomatis)",
     "description": "An all-in-one automatic plant watering system using ESP32, Firebase, Angular, and Node.js. It lets users monitor and control the system from their phone, including soil moisture and temperature tracking.",
-    "image": "/projects/perintis.jpg",
-    "link": "https://github.com/iqbalxyz/perintis-api",
+    "image": "/projects/perintis.png",
+    "link": "https://fir-plant-waterer.web.app",
     "github": "https://github.com/iqbalxyz/perintis-api",
     "tags": ["NODE", "EXPRESS", "ANGULAR", "FIREBASE"]
   },
@@ -51,7 +50,6 @@
     "title": "Online Gamestore",
     "description": "A college project that I built using CodeIgniter and bootstrap as my first attempt to create an MVC architecture application. It is a simple online gamestore using php native for the backend and MySQL for the database.",
     "image": "/projects/gamestore.png",
-    "link": "https://github.com/iqbalxyz/toko-game-online",
     "github": "https://github.com/iqbalxyz/toko-game-online",
     "tags": ["CODEIGNITER", "PHP", "MYSQL"]
   },
