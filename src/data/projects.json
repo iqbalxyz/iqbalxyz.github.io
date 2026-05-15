@@ -35,7 +35,7 @@
     "title": "SafeCircle Backend",
     "description": "SafeCircle is a backend service using Express.js, MariaDB, and JWT to provide API for SafeCircle mobile app.",
     "image": "/projects/nwatch.png",
-    "github": "https://github.com/iqbalxyz/neighborhood-watch-express",
+    "github": "https://github.com/iqbalxyz/safe-circle-backend",
     "tags": ["NODE", "EXPRESS", "MYSQL"]
   },
   {
